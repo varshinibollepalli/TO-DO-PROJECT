@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+
+    min-height: 100vh;
+
+    transition: 0.3s;
+}
+
+
+/* Header */
+
+.header {
+    background-color: #2563eb;
+    color: white;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.header h1 {
+    margin-bottom: 5px;
+}
+
+
+#greeting {
+    font-size: 15px;
+}
+
+
+#themeBtn {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background-color: white;
+    color: #222;
+
+    font-weight: bold;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 30px auto;
+}
+
+
+/* Common Section */
+
+section {
+    background-color: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Date */
+
+.date-section {
+    text-align: center;
+}
+
+
+#todayDate {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Quote */
+
+.quote-section {
+    text-align: center;
+}
+
+
+#quote {
+    margin-top: 10px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+
+/* Task Form */
+
+.task-section h2 {
+    margin-bottom: 15px;
+}
+
+
+#taskForm {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+#taskInput {
+    flex: 1;
+
+    min-width: 200px;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+#taskTime {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+#taskForm button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+#taskForm button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* List Header */
+
+.list-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+#clearBtn {
+    background-color: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+/* Task List */
+
+#taskList {
+    list-style: none;
+}
+
+
+.task-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: #fafafa;
+}
+
+
+.task-content {
+    flex: 1;
+}
+
+
+.task-name {
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+.task-time {
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: #666;
+}
+
+
+/* Completed Task */
+
+.completed .task-name {
+    text-decoration: line-through;
+
+    color: #888;
+}
+
+
+/* Buttons */
+
+.task-buttons {
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.complete-btn,
+.delete-btn {
+    border: none;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+.complete-btn {
+    background-color: #16a34a;
+
+    color: white;
+}
+
+
+.delete-btn {
+    background-color: #dc2626;
+
+    color: white;
+}
+
+
+/* Empty Message */
+
+#emptyMessage {
+    text-align: center;
+
+    color: #777;
+
+    padding: 20px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #777;
+}
+
+
+/* DARK MODE */
+
+body.dark {
+    background-color: #111827;
+
+    color: white;
+}
+
+
+body.dark section {
+    background-color: #1f2937;
+
+    color: white;
+}
+
+
+body.dark .task-item {
+    background-color: #374151;
+
+    border-color: #4b5563;
+}
+
+
+body.dark .task-time {
+    color: #d1d5db;
+}
+
+
+body.dark #taskInput,
+body.dark #taskTime {
+    background-color: #374151;
+
+    color: white;
+
+    border-color: #6b7280;
+}
+
+
+body.dark #themeBtn {
+    background-color: #374151;
+
+    color: white;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    #taskForm {
+        flex-direction: column;
+    }
+
+
+    #taskInput,
+    #taskTime,
+    #taskForm button {
+        width: 100%;
+    }
+
+
+    .task-item {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .task-buttons {
+        justify-content: flex-end;
+    }
+
+}
